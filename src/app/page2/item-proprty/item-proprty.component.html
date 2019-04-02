@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="single-product clearfix">
+            <div class="single-product-images col-xs-12 col-sm-5 col-md-5  col-lg-5">
+                <div class="single-slider slider-container-single">
+                    <div id="myCarousel3" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel3" data-slide-to="0" *ngFor = "let i = index; let item of itemObject?.images_full_paths" [class.active]="i == 0" ></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item slider_images" *ngFor = "let i = index; let item of itemObject?.images_full_paths"  [class.active]="i == 0">
+                                <img class="group list-group-image" [src]="item" alt="" />
+                                <span class="product_new_single">{{itemObject?.status_current_lng.description}}</span>
+                                <!--<img src="images/dark.jpg" alt="Chania" width="460" height="345">-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-product-content col-xs-12 col-sm-7 col-md-7  col-lg-7">
+                <div class="single-content">
+                    <div class="single-header-content clearfix">
+                        <div class="single-header col-xs-12 col-sm-9 col-md-9  col-lg-9">
+                            <span>{{itemObject?.available_current_lng.description}}</span>
+                            <h1>{{itemObject?.title}} </h1>
+                            <p>{{itemObject?.short_description}}</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 col-md-3  col-lg-3">
+                            <ul class="social-network social-circle">
+                                <li><a target="_blank" href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a target="_blank" href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a target="_blank" href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a target="_blank" href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a target="_blank" href="#" class="icoRss" title="Rss"><i class="fa fa-pinterest"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="single-description">
+                        <h3 [innerHTML]="itemObject?.long_description"></h3>
+                    </div>
+                    <div class="single-bottom-text">
+                        <button><img src="../../../assets/images/Forma-bot.png" />Скачать .pdf файл с описанием</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

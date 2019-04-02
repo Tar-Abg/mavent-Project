@@ -1,0 +1,11 @@
+<div class="our-product"> 
+    <div class="container">
+        <div class="row">
+            <div class="our-name">
+                <img src="../../../assets/images/3.png" />
+                <h2>{{dataForOurBrojects?.title}}</h2>
+            </div>
+        </div>
+    </div>
+    <app-fasatni-sistemi *ngFor= "let item of forInput" [dataFromOutside] = 'item'  [dataFromOutside1]='forInput1'></app-fasatni-sistemi> <!--componnt fasatni sistemi-->
+</div>

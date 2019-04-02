@@ -1,0 +1,31 @@
+<div class="container"> 
+  <div class="row">
+      <div class="facade-name col-lg-12">
+          <h4>{{dataFromOutside?.title}}</h4>
+          <hr class="hr_border">
+      </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+      <div class="our-text">
+          <p>{{dataFromOutside1?.description}}</p>
+      </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+      <div class="product clearfix">    
+        <app-item *ngFor = "let item of dataFromOutside?.products" [data] = 'item'></app-item>
+          <div class="item-product2 col-xs-12 col-sm-4 col-md-4  col-lg-4">
+              <div class="item-product read_more">
+                  <div class="thumbnail">
+                      <a routerLink="/itemAll" ><span>{{dataFromOutside1?.more}}</span></a>
+                      <a routerLink="/itemAll" class="hide-hover-images-product"><img class="group list-group-image" src="../../../assets/images/product-hover-eye-full.png" alt="hover" /></a>
+                      <img src="../../../assets/images/cross.png"/>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="our-product-all">
+  <div class="container">
+      <div class="row">
+          <div class="our-name-all">
+              <h2>{{data?.title}}</h2>
+          </div>
+          <div class="our-text-all">
+              <p [innerHTML]='data?.welcome_text'></p>
+          </div>
+      </div>
+  </div>
+  <app-fasatni-sistemi *ngFor= "let item of data1" [dataFromOutside] = 'item' [dataFromOutside1]='dataForText'></app-fasatni-sistemi>
+</div>

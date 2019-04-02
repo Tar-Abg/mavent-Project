@@ -1,0 +1,8 @@
+<div class="single clearfix">
+    <app-item-proprty></app-item-proprty>
+    <div class="facade-name col-lg-12">
+        <h4>{{data1?.other}}</h4>
+        <hr class="hr_border">
+    </div>
+    <app-item *ngFor="let item of data" [data]="item"></app-item>
+</div>

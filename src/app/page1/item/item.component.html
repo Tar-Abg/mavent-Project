@@ -1,0 +1,15 @@
+<div class="item-product2 col-xs-12 col-sm-4 col-md-4  col-lg-4">
+    <div class="item-product">
+        <div class="thumbnail">
+            <a [routerLink]="['/item',data.id]" class="hide-hover-images"><img class="group list-group-image" src="../../../assets/images/product-hover-eye-full.png" alt="" /></a>
+            <a [routerLink]="['/item',data.id]"><img class="group list-group-image" [src]="data.full_img_path" alt="" /></a>
+            <span [ngClass]="data.status_current_lng.class">{{data.status_current_lng.description}}</span>
+        </div>
+        <div class="product-text">
+            <p>{{data.multilanguage.short_description}}</p>
+        </div>
+        <div class="product-title">
+            <h1 ><a [routerLink]="['/item',data.id]">{{data.multilanguage.title}}</a></h1>
+        </div>
+    </div>
+</div>

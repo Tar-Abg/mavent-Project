@@ -1,0 +1,20 @@
+<div class="news-content clearfix">
+    <div *ngFor = 'let item of dataForNews' class="item-product2 col-xs-12 col-sm-4 col-md-4  col-lg-4">
+        <div class="item-product news-post">
+            <div class="thumbnail">
+                <a [routerLink]="['/news',item.id]" ><span>{{item?.multilanguage.title}}</span></a>
+                <a [routerLink]="['/news',item.id]" class="hide-hover-images-product"><img class="group list-group-image" src="../../../assets/images/product-hover-eye-full.png" alt="" /></a>
+                <img [src]="item.full_img_path"/>
+            </div>
+        </div>
+    </div>
+    <div class="item-product2 col-xs-12 col-sm-4 col-md-4  col-lg-4">
+        <div class="item-product read_more">
+            <div class="thumbnail">
+                <a href="news-all.html" ><span>{{data?.more}}</span></a>
+                <a href="news-all.html" class="hide-hover-images-product"><img class="group list-group-image" src="images/product-hover-eye-full.png" alt="" /></a>
+                <img src="../../../assets/images/cross.png"/>
+            </div>
+        </div>
+    </div>
+</div>
